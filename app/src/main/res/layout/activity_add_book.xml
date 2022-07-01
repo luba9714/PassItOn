@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_background2"
+    android:id="@+id/drawerlayout"
+    tools:context=".Activities.AddBookActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        >
+
+
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="Add Book"
+                android:textSize="35dp"
+                android:textStyle="bold"
+                android:textColor="#834049"
+                android:gravity="center_horizontal"
+
+                />
+
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            app:boxStrokeColor="@color/black"
+            android:hint="Name"
+            android:elevation="10dp"
+            android:textColorHint="#9A4B32">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/add_EDT_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:ems="10"
+                android:text=""
+                android:background="@drawable/border3"
+                android:textColor="#9A4B32"
+                android:inputType="textEmailAddress"
+                android:textSize="18dp" />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:hint="Author"
+            android:elevation="10dp"
+            android:textColorHint="#9A4B32"
+            app:boxStrokeColor="@color/black"
+            app:helperTextTextColor="@color/black">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/add_EDT_author"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:ems="10"
+                android:text=""
+                android:inputType="textPersonName"
+                android:textColor="#9A4B32"
+                android:background="@drawable/border3"
+
+                android:textSize="18dp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:hint="Genre"
+            android:textColorHint="#9A4B32"
+            android:elevation="10dp"
+            app:boxStrokeColor="@color/black"
+            app:helperTextTextColor="@color/black">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/add_EDT_genre"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:ems="10"
+                android:text=""
+                android:inputType="textPersonName"
+                android:textColor="#9A4B32"
+                android:background="@drawable/border3"
+                android:textSize="18dp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            >
+
+
+            <Button
+                android:id="@+id/add_BTN_browse"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Browse.."
+                android:textSize="13dp"
+                android:layout_marginTop="4dp"
+                android:backgroundTint="#834049"
+                android:elevation="20dp"
+
+
+
+                />
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:hint="Upload Image"
+                android:textColorHint="#9A4B32"
+                android:elevation="10dp"
+                app:boxStrokeColor="@color/black"
+                app:helperTextTextColor="@color/black">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/add_EDT_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:ems="10"
+                    android:text=""
+                    android:inputType="textPersonName"
+                    android:textColor="#9A4B32"
+                    android:background="@drawable/border3"
+
+                    android:textSize="18dp" />
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="320sp"
+            android:layout_height="200dp"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/border2"
+            android:orientation="vertical"
+            android:fillViewport="true"
+
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="About the Book"
+                    android:textSize="15dp"
+                    android:textColor="#834049"
+                    android:textStyle="bold"
+                    android:gravity="center_horizontal"
+
+                    />
+
+
+                <EditText
+                    android:id="@+id/add_LBL_bio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:text=""
+                    android:textSize="14dp" />
+
+            </LinearLayout>
+
+
+
+        </ScrollView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center_horizontal"
+
+                >
+
+                <Button
+                    android:id="@+id/add_BTN_save"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="save"
+                    android:backgroundTint="#834049"
+                    android:layout_marginTop="20dp"
+                    android:layout_gravity="center_horizontal"
+                    android:elevation="10dp"
+                    android:layout_marginEnd="20dp"
+
+
+                    />
+                <Button
+                    android:id="@+id/add_BTN_cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="cancel"
+
+                    android:backgroundTint="#834049"
+
+                    />
+
+            </LinearLayout>
+
+
+
+
+
+
+
+
+    </LinearLayout>
+    </ScrollView>
+
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

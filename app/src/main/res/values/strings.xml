@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">PassItOn</string>
+    <string name="facebook_application_id" translatable="false">YOUR_APP_ID</string>
+    <string name="facebook_login_protocol_scheme" translatable="false">fbYOUR_APP_ID</string>
+    <string name="searchBook">Search By Book</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="harry_potter_bio">Harry Potter has never been the star of a Quidditch team, scoring points while riding a broom far above the ground.\nHe knows no spells, has never helped to hatch a dragon, and has never \nworn a cloak of invisibility.\nAll he knows is a miserable life with the Dursleys, his horrible aunt and uncle, \nand their abominable son, Dudley \n- a great big swollen spoiled bully.\nHarrys room is a tiny closet at the foot of the stairs, and he hasnt had a birthday party in eleven years.\nBut all that is about to change when a mysterious letter arrives by owl messenger: \na letter with an invitation to an incredible place that Harry - and anyone who reads about him - will find unforgettable.\nFor its there that he finds not only friends, aerial sports, and magic in everything from classes to meals, but a great destiny thats been waiting for him...\nif Harry can survive the encounter.
+    </string>
+
+
+    <string name="the_notebook_bio">Set amid the austere beauty of the North Carolina coast begins the story of Noah Calhoun, a rural Southerner recently \nreturned from the Second World War.
+        \nNoah is restoring a plantation home to its former glory, and he is haunted by images of the beautiful girl he met fourteen years earlier, a girl he loved like no other.
+        \nUnable to find her, yet unwilling to forget the summer they spent together, \nNoah is content to live with only memories...
+        \nuntil she unexpectedly returns to his town to see him once again.
+        \nLike a puzzle within a puzzle, the story of Noah and Allie is just the beginning.
+        \nAs it unfolds, their tale miraculously becomes something different, with much higher stakes.
+        \nThe result is a deeply moving portrait of love itself, the tender moments and the fundamental changes that affect us all.
+        \nIt is a story of miracles and emotions that will stay with you forever
+    </string>
+    <string name="memory_man_bio">The first time was on the gridiron.
+        \nA big, towering athlete, he was the only person from his hometown \nof Burlington ever to go pro.
+        But his career ended before it had a chance to begin.
+        \nOn his very first play, a violent helmet-to-helmet collision knocked him off the field for good, and left him with an improbable side effect--he can never forget anything.
+        \nThe second time was at home nearly two decades later.
+        \nNow a police detective, Decker returned from a stakeout one evening and entered a nightmare--his wife, young daughter, and brother-in-law had been murdered.
+        \nHis family destroyed, their killers identity as mysterious as the motive behind the crime, and unable to forget a single detail from that horrible night, Decker finds his world collapsing around him.
+        \nHe leaves the police force, loses his home, and winds up on the street, taking piecemeal jobs as a private investigator when he can.
+        \nBut over a year later,
+        \na man turns himself in to the police
+        \nand confesses to the murders.
+        \nAt the same time a horrific event nearly brings Burlington to its knees, and Decker is called back in to help with this investigation.
+        \nDecker also seizes his chance to learn what really happened to his family that night.
+        \nTo uncover the stunning truth, he must use his remarkable gifts and confront the burdens that go along with them.
+        \nHe must endure the memories he would much rather forget. And he may have to make the ultimate sacrifice.
+    </string>
+    <string name="lord_of_the_rings_bio">One Ring to rule them all, One Ring to find them, One Ring to bring them all and in the darkeness bind them In ancient times the Rings of Power were crafted by the Elven-smiths, and Sauron, The Dark Lord, forged the One Ring, filling it with his own power so that he could rule all others.
+        \nBut the One Ring was taken from him, and though he sought it throughout Middle-earth, it remained lost to him.
+        \nAfter many ages it fell into the hands of Bilbo Baggins, as told in The Hobbit.
+        \nIn a sleepy village in the Shire, young Frodo Baggins finds himself faced with an immense task, as his elderly cousin Bilbo entrusts the Ring to his care.
+        \nFrodo must leave his home and make a perilous journey across Middle-earth to the Cracks of Doom, there to destroy the Ring and foil the Dark Lord in his evil purpose.
+    </string>
+</resources>
+

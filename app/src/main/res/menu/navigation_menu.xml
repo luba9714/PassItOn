@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/info"
+        android:icon="@drawable/ic_info"
+
+        android:title="Personal Info"/>
+    <item android:id="@+id/viewBooks"
+        android:icon="@drawable/ic_books"
+        android:title="My Books"/>
+
+    <item android:id="@+id/Favorites"
+        android:icon="@drawable/ic_heart"
+        android:title="Favorites"/>
+
+    <item android:id="@+id/LogOut"
+        android:title="Log Out"/>
+
+
+
+</menu>
