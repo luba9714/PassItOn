@@ -69,11 +69,11 @@ public class User {
 
 
 
-    public void setAllDetails(Editable name, Editable email, Editable city, Editable phone) {
-        this.setName(name.toString());
-        this.setEmail(email.toString());
-        this.setCity(city.toString());
-        this.setPhoneNum(phone.toString());
+    public void setAllDetails(String name, String email, String city, String phone) {
+        this.setName(name);
+        this.setEmail(email);
+        this.setCity(city);
+        this.setPhoneNum(phone);
     }
 
     public boolean notEmpty() {

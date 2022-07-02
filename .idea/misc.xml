@@ -5,6 +5,9 @@
       <map>
         <entry key="app/src/main/res/drawable/border2.xml" value="0.2115" />
         <entry key="app/src/main/res/layout/activity_add_book.xml" value="0.36102564102564105" />
+        <entry key="app/src/main/res/layout/activity_personal_info.xml" value="0.36102564102564105" />
+        <entry key="app/src/main/res/layout/navigation_header.xml" value="0.36102564102564105" />
+        <entry key="app/src/main/res/layout/navigation_view.xml" value="0.36102564102564105" />
       </map>
     </option>
   </component>

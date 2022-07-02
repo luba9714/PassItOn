@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.example.passiton.Data.Book;
 import com.example.passiton.Data.User;
 import com.example.passiton.R;
 import com.google.firebase.auth.FirebaseAuth;
@@ -26,7 +27,7 @@ public class PersonalInfoActivity extends AppCompatActivity {
     private FirebaseUser fUser;
     private Button profile_BTN_edit,profile_BTN_save;
     private FirebaseDatabase database;
-    private DatabaseReference myRef;
+    private DatabaseReference myRefUsers,myRefBooks;
     private User newUser =new User();
     private EditText profile_EDT_name,profile_EDT_email,profile_EDT_city,profile_EDT_phone;
 
@@ -36,7 +37,8 @@ public class PersonalInfoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_personal_info);
         fUser=FirebaseAuth.getInstance().getCurrentUser();
         database = FirebaseDatabase.getInstance();
-        myRef = database.getReference("users");
+        myRefUsers = database.getReference("users");
+        myRefBooks=database.getReference("books");
         setFindViews();
         setMenu();
         setInfoDB();
@@ -79,15 +81,13 @@ public class PersonalInfoActivity extends AppCompatActivity {
     }
 
     public void setInfoDB(){
-        myRef.addListenerForSingleValueEvent(new ValueEventListener() {
+        myRefUsers.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 // This method is called once with the initial value and again
                 // whenever data at this location is updated.
-                boolean found=false;
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
                     newUser = snapshot.getValue(User.class);
-                    String t=fUser.getUid();
                     if (newUser.getId().equals(fUser.getUid())) {
                         setInfoView();
                         //if edit was clicked
@@ -128,8 +128,31 @@ public class PersonalInfoActivity extends AppCompatActivity {
                 profile_EDT_email.setEnabled(false);
                 profile_EDT_city.setEnabled(false);
                 profile_EDT_phone.setEnabled(false);
-                newUser.setAllDetails(profile_EDT_name.getText(), profile_EDT_email.getText(), profile_EDT_city.getText(), profile_EDT_phone.getText());
-                myRef.child(newUser.getId()).setValue(newUser);
+                newUser.setAllDetails(profile_EDT_name.getText().toString(),
+                        profile_EDT_email.getText().toString(), profile_EDT_city.getText().toString(), profile_EDT_phone.getText().toString());
+
+                myRefBooks.addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(DataSnapshot dataSnapshot) {
+                        // This method is called once with the initial value and again
+                        // whenever data at this location is updated.
+                        for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                            Book book = snapshot.getValue(Book.class);
+                            if (book.getUser().getId().equals(newUser.getId())) {
+                                book.getUser().setAllDetails(newUser.getName(),newUser.getEmail(),newUser.getCity(),newUser.getPhoneNum());
+                                myRefBooks.child(book.getName()).setValue(book);
+                            }
+                        }
+                    }
+                    @Override
+                    public void onCancelled(DatabaseError error) {
+                        // Failed to read value
+                        Log.w("ccc", "Failed to read value.", error.toException());
+                    }
+                });
+
+
+                myRefUsers.child(newUser.getId()).setValue(newUser);
             }
         });
     }
